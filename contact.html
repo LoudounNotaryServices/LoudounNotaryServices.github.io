@@ -3,105 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Your Notary Service</title>
+    <title>Contact Us - Loudoun Notary Services</title>
+    <meta name="description" content="Get in touch with Loudoun Notary Services. Contact us via phone, email, or mailing address.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: #f4f4f4;
             color: #333;
+            font-size: 18px; /* Increase base font size for better readability */
+            line-height: 1.6; /* Increase line height for better readability */
+            text-align: center; /* Center the text */
         }
         header {
-            background-color: #007bff;
+            background-color: #004085;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 36px; /* Increase font size */
+            margin: 0;
         }
         nav {
             background-color: #0056b3;
             padding: 10px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
+            margin: 0 15px;
+            font-size: 20px; /* Increase font size */
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffdd57;
         }
         .container {
-            max-width: 960px;
-            margin: 20px auto;
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 0 20px;
         }
-        .content {
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-align: center;
+        .headline {
+            font-size: 36px; /* Increase font size */
+            font-weight: 700;
+            margin: 20px 0;
+            color: #004085;
+        }
+        .contact-content {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-content p {
+            font-size: 20px; /* Increase font size */
+            line-height: 1.8; /* Increase line height */
+            margin: 20px 0;
+            color: #333;
         }
         footer {
-            background-color: #007bff;
+            background-color: #004085;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 20px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-
+        footer p {
+            margin: 0;
+            font-size: 18px; /* Increase font size */
+        }
         /* Responsive styles */
         @media screen and (max-width: 768px) {
             nav a {
-                font-size: 16px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-            nav {
-                padding: 5px 0;
-            }
-            nav a {
-                font-size: 14px;
+                font-size: 18px;
+                margin: 0 10px;
             }
             .container {
                 padding: 0 10px;
             }
-            .content {
-                padding: 10px;
+            .headline {
+                font-size: 32px;
+            }
+            .contact-content p {
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 15px 0;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            nav {
+                padding: 8px 0;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 5px;
+            }
+            .container {
+                padding: 0 5px;
+            }
+            .headline {
+                font-size: 28px;
+            }
+            .contact-content {
+                padding: 20px;
+            }
+            .contact-content p {
+                font-size: 16px;
             }
             footer {
-                padding: 5px 0;
+                padding: 15px 0;
             }
-        }
-
-        /* Increased font size and centering for the paragraph */
-        .content p {
-            font-size: 24px;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        /* Style for contact information */
-        .contact-info {
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .contact-info p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Loudoun Notary Services</h1>
+        <h1>Contact Us</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -109,17 +139,15 @@
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <div class="container">
-        <div class="content">
-            <h2>Contact Us</h2>
+    <main class="container">
+        <div class="headline">Get in Touch</div>
+        <section class="contact-content">
             <p>Have a question or need assistance? Contact us using the information below:</p>
-            <div class="contact-info">
-                <p>Phone: +15712492370</p>
-                <p>Email: notary847@gmail.com</p>
-                <p>Mailing address: 43150 Broadlands Center Plaza #152-193, Ashburn, VA 20148</p>
-            </div>
-        </div>
-    </div>
+            <p>Phone: +15712492370</p>
+            <p>Email: notary847@gmail.com</p>
+            <p>Mailing Address: 43150 Broadlands Center Plaza #152-193, Ashburn, VA 20148</p>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Loudoun Notary Services</p>
     </footer>
