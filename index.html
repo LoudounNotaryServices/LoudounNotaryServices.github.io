@@ -3,87 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Notary Service</title>
+    <title>Loudoun Notary Services</title>
+    <meta name="description" content="Professional notary services in Loudoun. Schedule a notary today!">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: #f4f4f4;
             color: #333;
+            font-size: 18px; /* Increase base font size for better readability */
+            line-height: 1.6; /* Increase line height for better readability */
         }
         header {
-            background-color: #007bff;
+            background-color: #004085;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 36px; /* Increase font size */
+            margin: 0;
         }
         nav {
             background-color: #0056b3;
             padding: 10px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
+            margin: 0 15px;
+            font-size: 20px; /* Increase font size */
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffdd57;
         }
         .container {
-            max-width: 960px;
-            margin: 20px auto;
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 0 20px;
         }
-        .content {
+        .headline {
+            font-size: 36px; /* Increase font size */
+            font-weight: 700;
+            margin: 20px 0;
+            text-align: center;
+            color: #004085;
+        }
+        .content, .services-content, .why-choose-us-content, .location-content {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content p, .services-content p, .why-choose-us-content p, .location-content p {
+            font-size: 20px; /* Increase font size */
+            line-height: 1.8; /* Increase line height */
+            margin: 20px 0;
+            color: #333;
+        }
+        .benefits, .services, .why-choose-us {
+            font-size: 28px; /* Increase font size */
+            font-weight: 700;
+            margin: 30px 0;
+            list-style-type: none; 
+            padding-left: 0; 
+            text-align: center;
+        }
+        .benefits li, .services li, .why-choose-us li {
+            font-size: 20px; /* Increase font size */
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .why-choose-us li {
+            margin-bottom: 20px; /* Increase margin for more spacing */
+            line-height: 1.8; /* Increase line height */
+        }
+        .highlight {
+            background: linear-gradient(135deg, #ffdd57, #ffe67a);
             padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 5px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
             margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .highlight p {
+            font-size: 28px; /* Increase font size */
+            font-weight: 700;
+            color: #333;
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .location-content {
+            text-align: center; /* Center the text */
         }
         footer {
-            background-color: #007bff;
+            background-color: #004085;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 20px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-
+        footer p {
+            margin: 0;
+            font-size: 18px; /* Increase font size */
+        }
+        .services-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .services li {
+            flex: 0 1 45%;
+            margin: 10px;
+            font-size: 20px; /* Increase font size */
+            color: #555;
+        }
         /* Responsive styles */
         @media screen and (max-width: 768px) {
             nav a {
-                font-size: 16px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-            nav {
-                padding: 5px 0;
-            }
-            nav a {
-                font-size: 14px;
+                font-size: 18px;
+                margin: 0 10px;
             }
             .container {
                 padding: 0 10px;
             }
-            .content {
-                padding: 10px;
+            .headline {
+                font-size: 32px;
             }
-            footer {
-                padding: 5px 0;
+            .benefits, .services, .why-choose-us {
+                font-size: 26px;
+            }
+            .content p, .services-content p, .why-choose-us-content p, .location-content p {
+                font-size: 18px;
+            }
+            .services li, .why-choose-us li {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            .highlight p {
+                font-size: 24px;
             }
         }
-
-        /* Increased font size and centering for the paragraph */
-        .content p {
-            font-size: 24px;
-            line-height: 1.6;
-            text-align: center;
-            font-weight: bold;
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 15px 0;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            nav {
+                padding: 8px 0;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 5px;
+            }
+            .container {
+                padding: 0 5px;
+            }
+            .headline {
+                font-size: 28px;
+            }
+            .benefits, .services, .why-choose-us {
+                font-size: 24px;
+            }
+            .content, .services-content, .why-choose-us-content, .location-content {
+                padding: 20px;
+            }
+            .content p, .services-content p, .why-choose-us-content p, .location-content p {
+                font-size: 16px;
+            }
+            .services li, .why-choose-us li {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            .highlight p {
+                font-size: 20px;
+            }
+            footer {
+                padding: 15px 0;
+            }
         }
     </style>
 </head>
@@ -97,15 +213,54 @@
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <div class="container">
-        <div class="content">
-            <p>Schedule a notary today!</p>
-            <p>Phone: +15712492370</p>
-            <p>Email: notary847@gmail.com</p>
-        </div>
-    </div>
+    <main class="container">
+        <div class="headline">Have a notary at your door within minutes</div>
+        <section class="content">
+            <ul class="benefits">
+                <li>Open 24 hours</li>
+                <li>Same day service</li>
+                <li>We meet you wherever is most convenient for you</li>
+            </ul>
+            <div class="highlight">
+                <p>Schedule a notary today!</p>
+                <p>Phone: +15712492370</p>
+                <p>Email: notary847@gmail.com</p>
+            </div>
+        </section>
+        <section class="services-content">
+            <div class="headline">Our Services</div>
+            <ul class="services">
+                <li>Last Will and Testament</li>
+                <li>Power of Attorneys</li>
+                <li>Affidavits</li>
+                <li>Living Trusts</li>
+                <li>Deeds</li>
+                <li>Separation Agreements</li>
+                <li>I-9 Employment Forms</li>
+                <li>Oaths and Affirmations</li>
+                <li>Sworn Statements and Declarations</li>
+                <li>And more</li>
+            </ul>
+        </section>
+        <section class="why-choose-us-content">
+            <div class="headline">Why Choose Us</div>
+            <ul class="why-choose-us">
+                <li>Fast and reliable - Your time is important. We strive to provide you with fast and efficient notary services.</li>
+                <li>We arrive on time</li>
+                <li>Experienced professionals who have notarized 100+ documents</li>
+                <li>Flexible scheduling to accommodate the needs of the customer such as after hours and weekends</li>
+                <li>Pricing - We offer competitive pricing to provide the best value to our customers</li>
+            </ul>
+        </section>
+        <section class="location-content">
+            <div class="headline">Where Are We Located</div>
+            <p>We do not have a physical location. We meet you wherever is most convenient for you.</p>
+            <p>We service Loudoun County and those outside of Loudoun County as well.</p>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Loudoun Notary Services</p>
     </footer>
 </body>
 </html>
+
