@@ -5,201 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loudoun Notary Services</title>
     <meta name="description" content="Professional notary services in Loudoun. Schedule a notary today!">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
-            font-size: 18px; /* Increase base font size for better readability */
-            line-height: 1.6; /* Increase line height for better readability */
+            line-height: 1.6;
         }
+
         header {
-            background-color: #004085;
+            background: #1a73e8;
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
-            font-size: 36px; /* Increase font size */
             margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
+
         nav {
-            background-color: #0056b3;
+            background: #fff;
             padding: 10px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         nav a {
-            color: #fff;
             text-decoration: none;
+            color: #1a73e8;
+            font-size: 1rem;
             margin: 0 15px;
-            font-size: 20px; /* Increase font size */
-            font-weight: 500;
-            transition: color 0.3s;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         nav a:hover {
-            color: #ffdd57;
+            background-color: #1a73e8;
+            color: #fff;
         }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 5px 10px;
+                font-size: 1rem;
+            }
         }
-        .headline {
-            font-size: 36px; /* Increase font size */
-            font-weight: 700;
-            margin: 20px 0;
+
+        .hero {
             text-align: center;
-            color: #004085;
-        }
-        .content, .services-content, .why-choose-us-content, .location-content {
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin-top: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .content p, .services-content p, .why-choose-us-content p, .location-content p {
-            font-size: 20px; /* Increase font size */
-            line-height: 1.8; /* Increase line height */
-            margin: 20px 0;
+            background: url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+            padding: 60px 20px;
             color: #333;
         }
-        .benefits, .services, .why-choose-us {
-            font-size: 28px; /* Increase font size */
+
+        .hero h2 {
+            font-size: 2rem;
             font-weight: 700;
-            margin: 30px 0;
-            list-style-type: none; 
-            padding-left: 0; 
-            text-align: center;
-        }
-        .benefits li, .services li, .why-choose-us li {
-            font-size: 20px; /* Increase font size */
             margin-bottom: 15px;
-            color: #555;
         }
-        .why-choose-us li {
-            margin-bottom: 20px; /* Increase margin for more spacing */
-            line-height: 1.8; /* Increase line height */
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
         }
-        .highlight {
-            background: linear-gradient(135deg, #ffdd57, #ffe67a);
+
+        .btn {
+            background: #1a73e8;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0f5bb5;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 40px auto;
             padding: 20px;
+            background: #fff;
             border-radius: 10px;
-            border: 1px solid #ddd;
-            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .highlight p {
-            font-size: 28px; /* Increase font size */
+
+        .section h2 {
+            font-size: 1.8rem;
             font-weight: 700;
-            color: #333;
-            margin: 10px 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
-        .location-content {
-            text-align: center; /* Center the text */
+
+        .section p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
         }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #1a73e8;
+        }
+
+        .stars {
+            color: #ff9800;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #1a73e8;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: underline;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
         footer {
-            background-color: #004085;
+            background: #1a73e8;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
+            padding: 15px 0;
+            margin-top: 40px;
         }
+
         footer p {
             margin: 0;
-            font-size: 18px; /* Increase font size */
-        }
-        .services-content {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .services li {
-            flex: 0 1 45%;
-            margin: 10px;
-            font-size: 20px; /* Increase font size */
-            color: #555;
-        }
-        /* Responsive styles */
-        @media screen and (max-width: 768px) {
-            nav a {
-                font-size: 18px;
-                margin: 0 10px;
-            }
-            .container {
-                padding: 0 10px;
-            }
-            .headline {
-                font-size: 32px;
-            }
-            .benefits, .services, .why-choose-us {
-                font-size: 26px;
-            }
-            .content p, .services-content p, .why-choose-us-content p, .location-content p {
-                font-size: 18px;
-            }
-            .services li, .why-choose-us li {
-                font-size: 18px;
-                margin-bottom: 10px;
-            }
-            .highlight p {
-                font-size: 24px;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            header {
-                padding: 15px 0;
-            }
-            header h1 {
-                font-size: 28px;
-            }
-            nav {
-                padding: 8px 0;
-            }
-            nav a {
-                font-size: 16px;
-                margin: 0 5px;
-            }
-            .container {
-                padding: 0 5px;
-            }
-            .headline {
-                font-size: 28px;
-            }
-            .benefits, .services, .why-choose-us {
-                font-size: 24px;
-            }
-            .content, .services-content, .why-choose-us-content, .location-content {
-                padding: 20px;
-            }
-            .content p, .services-content p, .why-choose-us-content p, .location-content p {
-                font-size: 16px;
-            }
-            .services li, .why-choose-us li {
-                font-size: 16px;
-                margin-bottom: 8px;
-            }
-            .highlight p {
-                font-size: 20px;
-            }
-            footer {
-                padding: 15px 0;
-            }
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -208,59 +192,97 @@
         <h1>Loudoun Notary Services</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index3.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
+        <a href="about2.html">About Us</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <main class="container">
-        <div class="headline">Have a notary at your door within minutes</div>
-        <section class="content">
-            <ul class="benefits">
-                <li>Open 24 hours</li>
-                <li>Same day service</li>
-                <li>We meet you wherever is most convenient for you</li>
-            </ul>
-            <div class="highlight">
-                <p>Schedule a notary today!</p>
-                <p>Phone: +15712492370</p>
-                <p>Email: notary847@gmail.com</p>
+    <section class="hero">
+        <h2>Have a Notary at Your Door Within Minutes</h2>
+        <p>We provide fast, reliable, and professional notary services in Loudoun and beyond.</p>
+        <h2>Call 571-249-2370</h2>
+    </section>
+    <div class="section">
+        <h2>Customer Testimonials</h2>
+        <p>Here’s what our clients have to say about our exceptional services:</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Curtis Jackson</h3>
+                <div class="stars">★★★★★</div>
+                <p><strong>Exceptional, Fast, and Convenient Notary Service</strong></p>
+                <p>I recently had an excellent experience with Loudoun Notary Services. Their service was a lifesaver, especially after UPS informed us that they don’t provide notary services over the weekend...</p>
+                <p id="more-curtis" class="hidden">Loudoun Notary Services promptly met us at a convenient location, Harris Teeter, within just a few minutes notice. It only took 10 minutes for their representative to arrive, which was incredibly fast and efficient. The process was not only quick but also very affordable. I highly recommend Loudoun Notary Services for their unmatched speed, convenience, and affordability. Their service is truly second to none. <strong>Thank you, Rani!</strong></p>
+                <span class="read-more" onclick="toggleReview('more-curtis', this)">Read More</span>
             </div>
-        </section>
-        <section class="services-content">
-            <div class="headline">Our Services</div>
-            <ul class="services">
-                <li>Last Will and Testament</li>
-                <li>Power of Attorneys</li>
-                <li>Affidavits</li>
-                <li>Living Trusts</li>
-                <li>Deeds</li>
-                <li>Separation Agreements</li>
-                <li>I-9 Employment Forms</li>
-                <li>Oaths and Affirmations</li>
-                <li>Sworn Statements and Declarations</li>
-                <li>And more</li>
-            </ul>
-        </section>
-        <section class="why-choose-us-content">
-            <div class="headline">Why Choose Us</div>
-            <ul class="why-choose-us">
-                <li>Fast and reliable - Your time is important. We strive to provide you with fast and efficient notary services.</li>
-                <li>We arrive on time</li>
-                <li>Experienced professionals who have notarized 100+ documents</li>
-                <li>Flexible scheduling to accommodate the needs of the customer such as after hours and weekends</li>
-                <li>Pricing - We offer competitive pricing to provide the best value to our customers</li>
-            </ul>
-        </section>
-        <section class="location-content">
-            <div class="headline">Where Are We Located</div>
-            <p>We do not have a physical location. We meet you wherever is most convenient for you.</p>
-            <p>We service Loudoun County and those outside of Loudoun County as well.</p>
-        </section>
-    </main>
+            <div class="card">
+                <h3>Anita Gibson</h3>
+                <div class="stars">★★★★★</div>
+                <p><strong>Friendly and Professional</strong></p>
+                <p>Rani was very friendly and professional. He even came to my house to notarize my documents. I'd definitely use his service again.</p>
+            </div>
+            <div class="card">
+                <h3>Stanley Watson</h3>
+                <div class="stars">★★★★★</div>
+                <p><strong>Helpful in a Crunch Moment</strong></p>
+                <p>Rani was extremely helpful in a crunch moment when I had to get some documents notarized and overnighted in a very short time...</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of notary services tailored to your needs.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Last Will & Testament</h3>
+                <p>Ensure your wishes are legally documented and notarized.</p>
+            </div>
+            <div class="card">
+                <h3>Power of Attorney</h3>
+                <p>We handle all your notary needs for legal documents.</p>
+            </div>
+            <div class="card">
+                <h3>And More!</h3>
+                <p>Contact us for affidavits, deeds, living trusts, and more.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Why Choose Us</h2>
+        <p>Here’s why our clients trust us with their notary needs:</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Fast & Reliable</h3>
+                <p>We respect your time and always arrive promptly.</p>
+            </div>
+            <div class="card">
+                <h3>Experienced Professionals</h3>
+                <p>Over 100+ notarizations completed successfully.</p>
+            </div>
+            <div class="card">
+                <h3>Flexible Scheduling</h3>
+                <p>We work around your schedule, even on weekends!</p>
+            </div>
+        </div>
+    </div>
+    <section class="hero">
+        <h2>Schedule a notary today</h2>
+        <p>We provide fast, reliable, and professional notary services in Loudoun and beyond.</p>
+        <h2>Call 571-249-2370</h2>
+    </section>
     <footer>
-        <p>&copy; 2024 Loudoun Notary Services</p>
+        <p>&copy; 2025 Loudoun Notary Services</p>
     </footer>
+    <script>
+        function toggleReview(id, el) {
+            const moreText = document.getElementById(id);
+            if (moreText.classList.contains('hidden')) {
+                moreText.classList.remove('hidden');
+                el.innerText = 'Read Less';
+            } else {
+                moreText.classList.add('hidden');
+                el.innerText = 'Read More';
+            }
+        }
+    </script>
 </body>
 </html>
-
