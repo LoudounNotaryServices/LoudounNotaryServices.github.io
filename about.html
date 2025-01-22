@@ -5,127 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Loudoun Notary Services</title>
     <meta name="description" content="Learn more about Loudoun Notary Services and our commitment to providing reliable and efficient notary services.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
-            font-size: 18px; /* Increase base font size for better readability */
-            line-height: 1.6; /* Increase line height for better readability */
-            text-align: center; /* Center the text */
+            line-height: 1.6;
         }
+
         header {
-            background-color: #004085;
+            background: #1a73e8;
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
-            font-size: 36px; /* Increase font size */
             margin: 0;
-        }
-        nav {
-            background-color: #0056b3;
-            padding: 10px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 20px; /* Increase font size */
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffdd57;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .headline {
-            font-size: 36px; /* Increase font size */
+            font-size: 2rem;
             font-weight: 700;
-            margin: 20px 0;
-            color: #004085;
+            text-transform: uppercase;
         }
-        .about-content {
-            padding: 30px;
-            background-color: #fff;
+
+        nav {
+            background: #fff;
+            padding: 10px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-size: 1rem;
+            margin: 0 15px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1a73e8;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 5px 10px;
+                font-size: 1rem;
+            }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
             border-radius: 10px;
-            margin-top: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        .about-content p {
-            font-size: 20px; /* Increase font size */
-            line-height: 1.8; /* Increase line height */
+
+        .container h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a73e8;
+            text-align: center;
+        }
+
+        .container p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .reviews-carousel {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
             margin: 20px 0;
-            color: #333;
         }
+
+        .reviews-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
+        .review-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .review-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1a73e8;
+        }
+
+        .review-card .stars {
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            color: #1a73e8;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .call-button {
+            display: block;
+            width: max-content;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .call-button:hover {
+            background-color: #0f5bb5;
+        }
+
         footer {
-            background-color: #004085;
+            background: #1a73e8;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
+            padding: 15px 0;
+            margin-top: 40px;
         }
+
         footer p {
             margin: 0;
-            font-size: 18px; /* Increase font size */
-        }
-        /* Responsive styles */
-        @media screen and (max-width: 768px) {
-            nav a {
-                font-size: 18px;
-                margin: 0 10px;
-            }
-            .container {
-                padding: 0 10px;
-            }
-            .headline {
-                font-size: 32px;
-            }
-            .about-content p {
-                font-size: 18px;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            header {
-                padding: 15px 0;
-            }
-            header h1 {
-                font-size: 28px;
-            }
-            nav {
-                padding: 8px 0;
-            }
-            nav a {
-                font-size: 16px;
-                margin: 0 5px;
-            }
-            .container {
-                padding: 0 5px;
-            }
-            .headline {
-                font-size: 28px;
-            }
-            .about-content {
-                padding: 20px;
-            }
-            .about-content p {
-                font-size: 16px;
-            }
-            footer {
-                padding: 15px 0;
-            }
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -134,21 +217,78 @@
         <h1>About Us</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index3.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
+        <a href="about2.html">About Us</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <main class="container">
-        <div class="headline">About Loudoun Notary Services</div>
-        <section class="about-content">
+    <div class="container">
+        <h2>About Loudoun Notary Services</h2>
+        <div class="about-content">
             <p>We are committed to providing reliable and efficient notary services to our clients.</p>
             <p>With a focus on professionalism and customer satisfaction, we strive to meet the unique needs of each individual.</p>
             <p>Our team consists of experienced notaries dedicated to upholding the highest standards of integrity and confidentiality.</p>
-        </section>
-    </main>
+        </div>
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-carousel">
+            <div class="reviews-wrapper">
+                <div class="review-card">
+                    <h3>Jawad Bushnaq</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"What a great service. Notary that will come to your door. Very easy, very fast, and very friendly."</p>
+                    <span class="read-more">Read More</span>
+                </div>
+                <div class="review-card">
+                    <h3>Eiman Nabi</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"I needed notary services urgently, and Loudoun Notary exceeded my expectations. They were incredibly efficient."</p>
+                    <span class="read-more">Read More</span>
+                </div>
+                <div class="review-card">
+                    <h3>Sam Subramanian</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"Had a great experience from Loudoun Notary services from Rani in getting my documents notarized."</p>
+                    <span class="read-more">Read More</span>
+                </div>
+                <div class="review-card">
+                    <h3>Stanley Watson</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"Rani was extremely helpful in a crunch moment when I had to get some documents notarized and overnighted in a very short time."</p>
+                    <span class="read-more">Read More</span>
+                </div>
+                <div class="review-card">
+                    <h3>Joaquin Meza</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>"Rani is professional and extremely efficient! He is a nice guy with a great attitude! I recommend everybody use him!"</p>
+                    <span class="read-more">Read More</span>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-button" id="prev">&#8249;</button>
+                <button class="carousel-button" id="next">&#8250;</button>
+            </div>
+        </div>
+        <a href="tel:+15712492370" class="call-button">Call Us Now</a>
+    </div>
     <footer>
-        <p>&copy; 2024 Loudoun Notary Services</p>
+        <p>&copy; 2025 Loudoun Notary Services</p>
     </footer>
+    <script>
+        const wrapper = document.querySelector('.reviews-wrapper');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let offset = 0;
+
+        prevButton.addEventListener('click', () => {
+            offset = Math.min(offset + 100, 0);
+            wrapper.style.transform = `translateX(${offset}%)`;
+        });
+
+        nextButton.addEventListener('click', () => {
+            offset = Math.max(offset - 100, -400); // Adjust for number of reviews
+            wrapper.style.transform = `translateX(${offset}%)`;
+        });
+    </script>
 </body>
 </html>
+
